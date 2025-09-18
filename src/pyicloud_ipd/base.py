@@ -106,8 +106,8 @@ class PyiCloudService:
             self.HOME_ENDPOINT = "https://www.icloud.com"
             self.SETUP_ENDPOINT = "https://setup.icloud.com/setup/ws/1"
         elif domain == "cn":
-            self.AUTH_ROOT_ENDPOINT = "https://idmsa.apple.com.cn"
-            self.AUTH_ENDPOINT = "https://idmsa.apple.com.cn/appleauth/auth"
+            self.AUTH_ROOT_ENDPOINT = "https://idmsa.apple.com"
+            self.AUTH_ENDPOINT = "https://idmsa.apple.com/appleauth/auth"
             self.HOME_ENDPOINT = "https://www.icloud.com.cn"
             self.SETUP_ENDPOINT = "https://setup.icloud.com.cn/setup/ws/1"
         else:
@@ -591,7 +591,7 @@ class PyiCloudService:
             "Content-Type": "application/json",
             "X-Apple-OAuth-Client-Id": "d39ba9916b7251055b22c7f910e2ea796ee65e98b2ddecea8f5dde8d9d1a815d",
             "X-Apple-OAuth-Client-Type": "firstPartyAuth",
-            "X-Apple-OAuth-Redirect-URI": "https://www.icloud.com.cn"
+            "X-Apple-OAuth-Redirect-URI": "https://www.icloud.com"
             if self.domain == "cn"
             else "https://www.icloud.com",
             "X-Apple-OAuth-Require-Grant-Code": "true",

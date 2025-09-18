@@ -91,7 +91,7 @@ def _oauth_const_headers() -> Mapping[str, str]:
 
 def _oauth_redirect_header(domain: str) -> Mapping[str, str]:
     return {
-        "X-Apple-OAuth-Redirect-URI": "https://www.icloud.com.cn"
+        "X-Apple-OAuth-Redirect-URI": "https://www.icloud.com"
         if domain == "cn"
         else "https://www.icloud.com",
     }
@@ -109,7 +109,7 @@ def _oauth_headers(auth_session: AuthenticatedSession) -> Mapping[str, str]:
 
 def _auth_url(domain: str) -> str:
     return (
-        "https://idmsa.apple.com.cn/appleauth/auth"
+        "https://idmsa.apple.com/appleauth/auth"
         if domain == "cn"
         else "https://idmsa.apple.com/appleauth/auth"
     )
